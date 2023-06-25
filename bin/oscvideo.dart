@@ -23,6 +23,12 @@ void main(List<String> args) async {
       case '/stop':
         await player.stop();
         exit(1);
+      case '/blank':
+        await player.load("../assets/blank.png");
+        await player.play();
+      case '/testcard':
+        await player.load("../assets/test.png");
+        await player.play();
     }
   });
 }
